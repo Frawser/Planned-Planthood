@@ -162,7 +162,6 @@ h3 {
 
 a {
   text-decoration: none;
-  color: var(--clr-accent);
 
   &:hover,
   &:focus-visible {
@@ -189,7 +188,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 65rem;
   margin: 0 auto;
   padding: 0;
   height: 100%;
@@ -206,6 +205,7 @@ body {
   align-items: center;
   color: var(--clr-accent);
   font-weight: var(--fw-semi-bold);
+  text-decoration: none;
 }
 
 .brand svg {
@@ -219,7 +219,7 @@ body {
 .brand-text {
   color: var(--clr-accent);
   font-weight: var(--fw-semi-bold);
-  font-size: var(--fs-400);
+  font-size: var(--fs-500);
 }
 
 .nav-content li:not(.brand) {
@@ -234,21 +234,63 @@ body {
   padding: 0 2rem;
   font-weight: var(--fw-semi-bold);
   color: var(--clr-accent);
-  font-size: var(--fs-400);
+  font-size: var(--fs-500);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .nav-content li {
   height: 100%;
 }
 
-.nav-content li a:hover,
-.nav-content li a:focus-visible {
+.nav-content li:not(.brand) a:hover,
+.nav-content li:not(.brand) a:focus-visible {
   background-color: var(--clr-accent);
   color: var(--clr-neutral-100);
   text-decoration: none;
 }
 
-/* Uppskattade växter Section */
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--clr-accent);
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+.hamburger:hover {
+  background-color: var(--clr-accent);
+  color: var(--clr-neutral-100);
+  text-decoration: none;
+}
+
+.hamburger:hover span {
+  background-color: var(--clr-neutral-100);
+}
+
+/* Mobile burger */
+@media (875px > width) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-content li:not(.brand) {
+    display: none;
+  }
+}
+
+/* Uppskattade växter */
 .featured-plants {
   padding-top: 3rem;
   margin-bottom: 1rem;
@@ -271,7 +313,7 @@ body {
   margin-bottom: 1rem;
 }
 
-/* GRID */
+/* GRID UPPSKATTADE VÄXTER*/
 .plants-grid li:nth-child(1) {
   grid-area: one;
 }
@@ -299,12 +341,35 @@ body {
 
   padding: 0.3rem;
   list-style: none;
-  width: 60%;
+  max-width: 60rem;
+  grid-auto-rows: 1fr;
   margin: 0 auto;
   border: 0.5rem solid var(--clr-neutral-100);
   background-color: var(--clr-neutral-100);
   box-shadow: var(--border-shadow);
   overflow: hidden;
+}
+/* Tablet */
+@media (700px < width < 980px) {
+  .plants-grid {
+    display: grid;
+    grid-template-areas:
+      "one two three"
+      "four five six";
+    margin: 1rem auto;
+  }
+}
+
+/* Mobile */
+@media (700px > width) {
+  .plants-grid {
+    display: grid;
+    grid-template-areas:
+      "one two"
+      "three four"
+      "five six";
+    margin: 1rem 2rem;
+  }
 }
 
 .plant-img {
@@ -335,17 +400,57 @@ body {
   overflow: hidden;
   margin: 3rem 0;
 
-  /* Grid layout */
+  /* Grid */
   display: grid;
   grid-template-areas:
-    "heading illustration"
-    "form illustration";
+    "heading svg"
+    "form svg";
   gap: 2rem;
   align-items: center;
   justify-content: center;
 }
 
-.newsletter h2 {
+/* Tablet */
+@media (700px < width < 890px) {
+  .newsletter {
+    display: grid;
+    grid-template-areas:
+      "svg"
+      "heading"
+      "form";
+    margin: 1rem auto;
+  }
+
+  .newsletter svg {
+    margin: 0 auto;
+  }
+
+  .newsletter h3 {
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (700px > width) {
+  .newsletter {
+    display: grid;
+    grid-template-areas:
+      "svg"
+      "heading"
+      "form";
+    margin: 1rem auto;
+  }
+
+  .newsletter svg {
+    margin: 0 auto;
+  }
+
+  .newsletter h3 {
+    text-align: center;
+  }
+}
+
+.newsletter h3 {
   font-size: var(--fs-700);
   max-width: 25rem;
   margin: 0;
@@ -362,7 +467,7 @@ body {
   padding: 2.5rem;
   width: 12rem;
   height: auto;
-  grid-area: illustration;
+  grid-area: svg;
 }
 
 .newsletter form {
@@ -392,7 +497,7 @@ body {
 
 .newsletter .button {
   background-color: var(--clr-accent);
-  color: white;
+  color: var(--clr-neutral-100);
   border: 1px solid transparent;
   padding: 1rem 1.2rem;
   border-radius: 5rem;
@@ -407,4 +512,365 @@ body {
   background-color: var(--clr-neutral-100);
   border-color: 1px solid var(--clr-accent);
   color: var(--clr-accent);
+}
+
+/*Plant Card Grid */
+.plant-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  list-style: none;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.plant-card {
+  display: grid;
+  grid-template-rows: 15rem auto auto 1fr auto;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: var(--border-shadow);
+  transition: transform 0.2s ease;
+}
+
+/* tablet */
+@media (980px > width) {
+  .plant-card-grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2rem;
+  }
+}
+
+@media (870px > width) {
+  .plant-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2rem;
+  }
+}
+
+/* Mobile*/
+@media (max-width: 510px) {
+  .plant-card-grid {
+    grid-template-columns: 1fr;
+    margin: 1rem;
+  }
+}
+
+.plant-card:hover {
+  transform: translateY(-4px);
+}
+
+.plant-card-image {
+  overflow: hidden;
+  height: 15rem;
+  padding: 0.7rem 0.7rem 0.8rem;
+}
+
+.plant-card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.plant-card-tags {
+  padding: 0.5rem 1rem 0;
+}
+
+.plant-card-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 0.5rem;
+  list-style: none;
+}
+
+.plant-card-tags a {
+  font-size: var(--fs-200);
+  color: var(--clr-neutral-100);
+  padding: 0.4rem 0.6rem;
+  text-decoration: none;
+  border-radius: 5rem;
+  font-weight: var(--fw-bold);
+}
+
+.plant-card-header {
+  padding: 0.5rem 1rem;
+}
+
+.plant-card-title {
+  font-size: var(--fs-600);
+  padding: 0.6rem 0;
+}
+
+.plant-card-description {
+  padding: 0 1rem 1rem;
+  flex-grow: 1;
+}
+
+.plant-card-user {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.25rem 0.75rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: var(--clr-neutral-100);
+  font-size: 0.9rem;
+}
+
+.plant-card-user-icon {
+  grid-row: 1 / span 2;
+  grid-column: 1;
+  width: 2.5rem;
+  border: 1px solid var(--clr-primary-dark);
+  border-radius: 50%;
+}
+
+.plant-card-username {
+  grid-row: 1;
+  grid-column: 2;
+  font-weight: var(--fw-600);
+}
+
+.plant-card-time {
+  grid-row: 2;
+  grid-column: 2;
+  font-size: 0.75rem;
+  color: var(--clr-primary-dark);
+}
+
+/* TAGS */
+
+.tag-blommor {
+  background-color: var(--clr-flower);
+}
+
+.tag-ätbart {
+  background-color: var(--clr-edible);
+}
+
+.tag-grönsak {
+  background-color: var(--clr-green);
+}
+
+.tag-solälskande {
+  background-color: var(--clr-sunloving);
+}
+
+.tag-lättodlat {
+  background-color: var(--clr-easy);
+}
+
+.tag-dekorativ {
+  background-color: var(--clr-decorative);
+}
+
+.tag-färgstark {
+  background-color: var(--clr-colorful);
+}
+
+.tag-tålig {
+  background-color: var(--clr-robust);
+}
+.tag-kryddor {
+  background-color: var(--clr-green-400);
+}
+
+.tag-doftande {
+  background-color: var(--clr-fragrant);
+}
+.tag-snabbväxande {
+  background-color: var(--clr-fast);
+}
+
+.tag-luftfuktande {
+  background-color: var(--clr-air);
+}
+
+/* Previous Plants */
+
+.previous-plants {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-primary-dark);
+  padding: 3rem 1rem;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-areas:
+    "svg heading"
+    "svg desc"
+    "svg btn";
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 2rem;
+}
+
+/* Mobile / Tablet */
+@media (980px > width) {
+  .previous-plants {
+    grid-template-areas:
+      "svg"
+      "heading"
+      "desc"
+      "btn";
+    justify-items: center;
+    align-items: center;
+    margin: 2rem auto;
+  }
+  .svg-figure {
+    margin-right: 0;
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .previous-plants p {
+    text-align: center;
+  }
+}
+
+.previous-plants h5,
+.previous-plants p,
+.previous-plants button {
+  align-self: start;
+}
+
+.previous-plants h5 {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-700);
+  grid-area: heading;
+}
+
+.svg-figure {
+  background-color: var(--clr-accent);
+  padding: 4rem;
+  border-radius: 50%;
+  margin: 0 4rem;
+  grid-area: svg;
+}
+
+.previous-plants-svg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-accent);
+  padding: 0;
+  width: 6.5rem;
+  height: 6.5rem;
+}
+
+.previous-plants button {
+  background-color: var(--clr-accent);
+  color: var(--clr-neutral-100);
+  border: 1px solid transparent;
+  padding: 0.8rem 1rem;
+  border-radius: 5rem;
+  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-400);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  grid-area: btn;
+  max-width: 13rem;
+  justify-self: end;
+}
+
+.previous-plants .button:hover {
+  background-color: var(--clr-neutral-100);
+  border-color: 1px solid var(--clr-accent);
+  color: var(--clr-accent);
+}
+
+.previous-plants p {
+  grid-area: desc;
+  max-width: 35rem;
+  font-size: var(--fs-500);
+  margin: 0;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: clamp(10rem, 20vw, 15rem);
+  background-color: var(--clr-accent);
+  color: var(--clr-neutral-100);
+  padding: 3rem 4rem;
+  margin: 0 auto;
+}
+
+@media (1170px > width) {
+  .footer-nav {
+    display: none;
+  }
+
+  .footer {
+    gap: 0;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand figure {
+  margin: 0;
+  width: 3rem;
+}
+
+.footer svg {
+  width: 100%;
+  height: 100%;
+  stroke: var(--clr-neutral-100);
+  stroke-width: 2;
+  margin-right: 0.5rem;
+  display: block;
+}
+
+.brand h6 {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-semi-bold);
+}
+
+.footer-left p {
+  font-size: var(--fs-400);
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+  max-width: 500px;
+}
+
+.address p {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-400);
+}
+
+.address-info {
+  color: var(--clr-neutral-100);
+}
+
+.address-info :hover {
+  text-decoration: underline;
+  color: var(--clr-neutral-100);
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-500);
+  color: var(--clr-neutral-100);
 }

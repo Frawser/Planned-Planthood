@@ -9,40 +9,45 @@
   <body>
     <header>
       <nav class="navbar">
-        <ul class="nav-content">
-          <li class="brand">
-            <a href="#">
-              <svg
-                title="Planned Planthood Logo"
-                viewBox="0 0 214 210"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g fill="none" stroke-width="12">
-                  <path
-                    d="M116.833 193.533C117.406 192.909 117.969 192.279 118.522 191.645L168.173 160.226C206.289 136.107 217.36 86.0907 192.816 48.5247C189.153 42.9185 181.619 41.3343 175.976 44.905L125.764 76.6782C121.37 70.1605 116.086 64.0725 109.92 58.5872L52.4904 7.49831C46.8526 2.48295 38.1677 2.90777 33.061 8.46735C-2.89261 47.6094 0.211903 108.041 39.9737 143.413L97.4031 194.502C103.041 199.517 111.726 199.092 116.833 193.533Z"
-                  />
-                  <path
-                    d="M115.122 194.336C115.527 193.897 115.927 193.455 116.319 193.009L153.69 169.521C182.93 151.143 191.451 112.997 172.598 84.3362C169.529 79.6722 163.25 78.3762 158.555 81.3272L121.425 104.664C118.17 100 114.303 95.6362 109.83 91.6843L66.4654 53.3677C61.8146 49.2582 54.6598 49.6021 50.4409 54.1641C22.9065 83.9378 25.2893 129.917 55.732 156.816L99.097 195.132C103.748 199.242 110.903 198.898 115.122 194.336Z"
-                  />
-                </g>
-              </svg>
-              <span class="brand-text">PLANNED<br />PLANTHOOD</span>
-            </a>
-          </li>
-          <li><a href="#">HEM</a></li>
-          <li><a href="#">HISTORIK</a></li>
-          <li><a href="#">TIPS</a></li>
-          <li><a href="#">KONTAKT</a></li>
-        </ul>
-      </nav>
-
+  <ul class="nav-content">
+    <li class="brand">
+      <a href="#">
+        <svg
+          title="Planned Planthood Logo"
+          viewBox="0 0 214 210"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="none" stroke-width="12">
+            <path
+              d="M116.833 193.533C117.406 192.909 117.969 192.279 118.522 191.645L168.173 160.226C206.289 136.107 217.36 86.0907 192.816 48.5247C189.153 42.9185 181.619 41.3343 175.976 44.905L125.764 76.6782C121.37 70.1605 116.086 64.0725 109.92 58.5872L52.4904 7.49831C46.8526 2.48295 38.1677 2.90777 33.061 8.46735C-2.89261 47.6094 0.211903 108.041 39.9737 143.413L97.4031 194.502C103.041 199.517 111.726 199.092 116.833 193.533Z"
+            />
+            <path
+              d="M115.122 194.336C115.527 193.897 115.927 193.455 116.319 193.009L153.69 169.521C182.93 151.143 191.451 112.997 172.598 84.3362C169.529 79.6722 163.25 78.3762 158.555 81.3272L121.425 104.664C118.17 100 114.303 95.6362 109.83 91.6843L66.4654 53.3677C61.8146 49.2582 54.6598 49.6021 50.4409 54.1641C22.9065 83.9378 25.2893 129.917 55.732 156.816L99.097 195.132C103.748 199.242 110.903 198.898 115.122 194.336Z"
+            />
+          </g>
+        </svg>
+        <h1 class="brand-text">PLANNED<br />PLANTHOOD</h1>
+      </a>
+    </li>
+    <li><a href="#">HEM</a></li>
+    <li><a href="#">HISTORIK</a></li>
+    <li><a href="#">TIPS</a></li>
+    <li><a href="#">KONTAKT</a></li>
+    
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </ul>
+</nav>
       <section class="featured-plants">
-        <h2 id="featured-plants" class="">Uppskattade växter</h2>
-        <p class="">
+        <h2 id="featured-plants">Uppskattade växter</h2>
+        <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique,
           corporis ipsum.
         </p>
-        
+
         <ul class="plants-grid">
           <li class="plant-img">
             <figure>
@@ -109,12 +114,14 @@
     </header>
     <main>
       <section class="newsletter">
-        <h2>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
+        <h3>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h3>
         <form>
+          <label for="email-input" class="visually-hidden">E-postadress</label>
           <input
             type="email"
             id="email-input"
             placeholder="email@domain.com"
+            
             required
           />
           <button type="submit" class="button">SKICKA</button>
@@ -202,256 +209,359 @@
         </svg>
       </section>
       <section class="plants">
-        <article class="plant-card">
-          <figure class="card-image">
-            <img src="gurka.jpg" alt="" loading="lazy" />
-            <figcaption class="visually-hidden">
-              En bild av en gurka för att visa vad kortet handlar om för planta.
-            </figcaption>
-          </figure>
-
-          <section class="card-tags">
-            <ul class="tag-list">
-              <li><a href="#" rel="tag">Blommor</a></li>
-              <li><a href="#" rel="tag">Ätbart</a></li>
-              <li><a href="#" rel="tag">Grönska</a></li>
-            </ul>
-          </section>
-
-          <header>
-            <h3 class="card-title">Gurka</h3>
-          </header>
-
-          <section class="card-description">
-            <p>
-              Gurka växer snabbt, är enkel att odla och ger mängder med gurkor,
-              bara man är noga med vattning, omplantering, duschning och
-              gödsling.
-            </p>
-          </section>
-
-          <section class="user">
-            <figure class="user-icon">
-              <img src="user1.jpg" alt="" loading="lazy" />
+        <ul class="plant-card-grid">
+          <li class="plant-card">
+            <figure class="plant-card-image">
+              <img src="/Assets/images/jpg/gurka.jpg" alt="" loading="lazy" />
               <figcaption class="visually-hidden">
-                Bild på användarens profilbild för att visa vem som har skrivit
-                kortet.
+                En bild av en gurka för att visa vad kortet handlar om för
+                planta.
               </figcaption>
             </figure>
-            <span>Coolio</span>
-            <time datetime="2024-04-01"></time>
-          </section>
-        </article>
-        <article class="plant-card">
-          <figure class="card-image">
-            <img src="gurka.jpg" alt="" loading="lazy" />
-            <figcaption class="visually-hidden">
-              En bild av en Tomat för att visa vad kortet handlar om för planta.
-            </figcaption>
-          </figure>
 
-          <section class="card-tags">
-            <ul class="tag-list">
-              <li><a href="#" rel="tag">Solälskande</a></li>
-              <li><a href="#" rel="tag">Lättodlat</a></li>
-              <li><a href="#" rel="tag">Ätbart</a></li>
-            </ul>
-          </section>
+            <section class="plant-card-tags">
+              <ul class="plant-card-tag-list">
+                <li><a href="#" class="tag-blommor" rel="tag">Blommor</a></li>
+                <li><a href="#" class="tag-ätbart" rel="tag">Ätbart</a></li>
+                <li><a href="#" class="tag-grönsak" rel="tag">Grönsak</a></li>
+              </ul>
+            </section>
 
-          <header>
-            <h3 class="card-title">Tomat</h3>
-          </header>
+            <header class="plant-card-header">
+              <h4 class="plant-card-title">Gurka</h4>
+            </header>
 
-          <section class="card-description">
-            <p>
-              En perfekt grönsak att odla på balkongen eller i trädgården. Ger
-              riklig skörd under sommaren.
-            </p>
-          </section>
+            <section class="plant-card-description">
+              <p>
+                Gurka växer snabbt, är enkel att odla och ger mängder med
+                gurkor, bara man är noga med vattning, omplantering, duschning
+                och gödsling.
+              </p>
+            </section>
 
-          <section class="user">
-            <figure class="user-icon">
-              <img src="user1.jpg" alt="" loading="lazy" />
+            <footer class="plant-card-user">
+              <figure class="plant-card-user-icon">
+                <img
+                  src="https://avatar.iran.liara.run/public/28"
+                  alt=""
+                  loading="lazy"
+                />
+                <figcaption class="visually-hidden">
+                  Bild på användarens profilbild för att visa vem som har
+                  skrivit kortet.
+                </figcaption>
+              </figure>
+              <span class="plant-card-username">Coolio</span>
+              <time class="plant-card-time" datetime="2024-04-01"
+                >2024-04-01</time
+              >
+            </footer>
+          </li>
+          <li class="plant-card">
+            <figure class="plant-card-image">
+              <img src="/Assets/images/jpg/tomat.jpg" alt="" loading="lazy" />
               <figcaption class="visually-hidden">
-                Bild på användarens profilbild för att visa vem som har skrivit
-                kortet.
+                En bild av en Tomat för att visa vad kortet handlar om för
+                planta.
               </figcaption>
             </figure>
-            <span>Anna Odlare</span>
-            <time datetime="2024-12-05"></time>
-          </section>
-        </article>
-        <article class="plant-card">
-          <figure class="card-image">
-            <img src="gurka.jpg" alt="" loading="lazy" />
-            <figcaption class="visually-hidden">
-              En bild av en Pelargon för att visa vad kortet handlar om för
-              planta.
-            </figcaption>
-          </figure>
 
-          <section class="card-tags">
-            <ul class="tag-list">
-              <li><a href="#" rel="tag">Dekorativ</a></li>
-              <li><a href="#" rel="tag">Färgstark</a></li>
-              <li><a href="#" rel="tag">Tålig</a></li>
-              <li><a href="#" rel="tag">Blommor</a></li>
-            </ul>
-          </section>
+            <section class="plant-card-tags">
+              <ul class="plant-card-tag-list">
+                <li>
+                  <a href="#" class="tag-solälskande" rel="tag">Solälskande</a>
+                </li>
+                <li>
+                  <a href="#" class="tag-lättodlat" rel="tag">Lättodlat</a>
+                </li>
+                <li><a href="#" class="tag-ätbart" rel="tag">Ätbart</a></li>
+              </ul>
+            </section>
 
-          <header>
-            <h3 class="card-title">Pelargon</h3>
-          </header>
+            <header class="plant-card-header">
+              <h4 class="plant-card-title">Tomat</h4>
+            </header>
 
-          <section class="card-description">
-            <p>
-              En vacker och lättskött blomma som trivs både inne och ute under
-              sommaren.
-            </p>
-          </section>
+            <section class="plant-card-description">
+              <p>
+                En perfekt grönsak att odla på balkongen eller i trädgården. Ger
+                riklig skörd under sommaren.
+              </p>
+            </section>
 
-          <section class="user">
-            <figure class="user-icon">
-              <img src="user1.jpg" alt="" loading="lazy" />
+            <footer class="plant-card-user">
+              <figure class="plant-card-user-icon">
+                <img
+                  src="https://avatar.iran.liara.run/public/77"
+                  alt=""
+                  loading="lazy"
+                />
+                <figcaption class="visually-hidden">
+                  Bild på användarens profilbild för att visa vem som har
+                  skrivit kortet.
+                </figcaption>
+              </figure>
+              <span class="plant-card-username">Anna Odlare</span>
+              <time class="plant-card-time" datetime="2024-12-05"
+                >2024-12-05</time
+              >
+            </footer>
+          </li>
+          <li class="plant-card">
+            <figure class="plant-card-image">
+              <img
+                src="/Assets/images/jpg/pelargon.jpg"
+                alt=""
+                loading="lazy"
+              />
               <figcaption class="visually-hidden">
-                Bild på användarens profilbild för att visa vem som har skrivit
-                kortet.
+                En bild av en Pelargon för att visa vad kortet handlar om för
+                planta.
               </figcaption>
             </figure>
-            <span>Blomsterkalle</span>
-            <time datetime="2024-12-03"></time>
-          </section>
-        </article>
-        <article class="plant-card">
-          <figure class="card-image">
-            <img src="gurka.jpg" alt="" loading="lazy" />
-            <figcaption class="visually-hidden">
-              En bild av en Pelargon för att visa vad kortet handlar om för
-              planta.
-            </figcaption>
-          </figure>
 
-          <section class="card-tags">
-            <ul class="tag-list">
-              <li><a href="#" rel="tag">Kryddor</a></li>
-              <li><a href="#" rel="tag">Doftande</a></li>
-              <li><a href="#" rel="tag">Solälskande</a></li>
-            </ul>
-          </section>
+            <section class="plant-card-tags">
+              <ul class="plant-card-tag-list">
+                <li>
+                  <a href="#" class="tag-dekorativ" rel="tag">Dekorativ</a>
+                </li>
+                <li>
+                  <a href="#" class="tag-färgstark" rel="tag">Färgstark</a>
+                </li>
+                <li><a href="#" class="tag-tålig" rel="tag">Tålig</a></li>
+                <li><a href="#" class="tag-blommor" rel="tag">Blommor</a></li>
+              </ul>
+            </section>
 
-          <header>
-            <h3 class="card-title">Basilika</h3>
-          </header>
+            <header class="plant-card-header">
+              <h4 class="plant-card-title">Pelargon</h4>
+            </header>
 
-          <section class="card-description">
-            <p>
-              En fantastisk krydda för pastarätter och sallader. Trivs bäst i
-              ett soligt fönster.
-            </p>
-          </section>
+            <section class="plant-card-description">
+              <p>
+                En vacker och lättskött blomma som trivs både inne och ute under
+                sommaren.
+              </p>
+            </section>
 
-          <section class="user">
-            <figure class="user-icon">
-              <img src="user1.jpg" alt="" loading="lazy" />
+            <footer class="plant-card-user">
+              <figure class="plant-card-user-icon">
+                <img
+                  src="https://avatar.iran.liara.run/public/59"
+                  alt=""
+                  loading="lazy"
+                />
+                <figcaption class="visually-hidden">
+                  Bild på användarens profilbild för att visa vem som har
+                  skrivit kortet.
+                </figcaption>
+              </figure>
+              <span class="plant-card-username">Blomsterkalle</span>
+              <time class="plant-card-time" datetime="2024-12-03"
+                >2024-12-03</time
+              >
+            </footer>
+          </li>
+          <li class="plant-card">
+            <figure class="plant-card-image">
+              <img
+                src="/Assets/images/jpg/basilika.jpg"
+                alt=""
+                loading="lazy"
+              />
               <figcaption class="visually-hidden">
-                Bild på användarens profilbild för att visa vem som har skrivit
-                kortet.
+                En bild av en Basilika för att visa vad kortet handlar om för
+                planta.
               </figcaption>
             </figure>
-            <span>Krydd-Malin</span>
-            <time datetime="2024-12-07"></time>
-          </section>
-        </article>
-        <article class="plant-card">
-          <figure class="card-image">
-            <img src="gurka.jpg" alt="" loading="lazy" />
-            <figcaption class="visually-hidden">
-              En bild av en Sallad för att visa vad kortet handlar om för
-              planta.
-            </figcaption>
-          </figure>
 
-          <section class="card-tags">
-            <ul class="tag-list">
-              <li><a href="#" rel="tag">Snabbväxande</a></li>
-              <li><a href="#" rel="tag">Ätbart</a></li>
-              <li><a href="#" rel="tag">Grönska</a></li>
-            </ul>
-          </section>
+            <section class="plant-card-tags">
+              <ul class="plant-card-tag-list">
+                <li><a href="#" class="tag-kryddor" rel="tag">Kryddor</a></li>
+                <li><a href="#" class="tag-doftande" rel="tag">Doftande</a></li>
+                <li>
+                  <a href="#" class="tag-solälskande" rel="tag">Solälskande</a>
+                </li>
+              </ul>
+            </section>
 
-          <header>
-            <h3 class="card-title">Sallad</h3>
-          </header>
+            <header class="plant-card-header">
+              <h4 class="plant-card-title">Basilika</h4>
+            </header>
 
-          <section class="card-description">
-            <p>
-              Sallad är en av de enklaste grönsakerna att odla och ger snabba
-              resultat för färska måltider.
-            </p>
-          </section>
+            <section class="plant-card-description">
+              <p>
+                En fantastisk krydda för pastarätter och sallader. Trivs bäst i
+                ett soligt fönster.
+              </p>
+            </section>
 
-          <section class="user">
-            <figure class="user-icon">
-              <img src="user1.jpg" alt="" loading="lazy" />
+            <footer class="plant-card-user">
+              <figure class="plant-card-user-icon">
+                <img
+                  src="https://avatar.iran.liara.run/public/80"
+                  alt=""
+                  loading="lazy"
+                />
+                <figcaption class="visually-hidden">
+                  Bild på användarens profilbild för att visa vem som har
+                  skrivit kortet.
+                </figcaption>
+              </figure>
+              <span class="plant-card-username">Krydd-Malin</span>
+              <time class="plant-card-time" datetime="2024-12-07"
+                >2024-12-07</time
+              >
+            </footer>
+          </li>
+          <li class="plant-card">
+            <figure class="plant-card-image">
+              <img src="/Assets/images/jpg/sallad.jpg" alt="" loading="lazy" />
               <figcaption class="visually-hidden">
-                Bild på användarens profilbild för att visa vem som har skrivit
-                kortet.
+                En bild av en Sallad för att visa vad kortet handlar om för
+                planta.
               </figcaption>
             </figure>
-            <span>Grönis</span>
-            <time datetime="2024-12-06"></time>
-          </section>
-        </article>
-        <article class="plant-card">
-          <figure class="card-image">
-            <img src="gurka.jpg" alt="" loading="lazy" />
-            <figcaption class="visually-hidden">
-              En bild av en Ormbunke för att visa vad kortet handlar om för
-              planta.
-            </figcaption>
-          </figure>
 
-          <section class="card-tags">
-            <ul class="tag-list">
-              <li><a href="#" rel="tag">Luftfuktande</a></li>
-              <li><a href="#" rel="tag">Grönska</a></li>
-              <li><a href="#" rel="tag">Dekorativ</a></li>
-            </ul>
-          </section>
+            <section class="plant-card-tags">
+              <ul class="plant-card-tag-list">
+                <li>
+                  <a href="#" class="tag-snabbväxande" rel="tag"
+                    >Snabbväxande</a
+                  >
+                </li>
+                <li><a href="#" class="tag-ätbart" rel="tag">Ätbart</a></li>
+                <li><a href="#" class="tag-grönsak" rel="tag">Grönska</a></li>
+              </ul>
+            </section>
 
-          <header>
-            <h3 class="card-title">Ormbunke</h3>
-          </header>
+            <header class="plant-card-header">
+              <h4 class="plant-card-title">Sallad</h4>
+            </header>
 
-          <section class="card-description">
-            <p>
-              En klassisk växt som passar perfekt i badrummet eller på skuggiga
-              platser.
-            </p>
-          </section>
+            <section class="plant-card-description">
+              <p>
+                Sallad är en av de enklaste grönsakerna att odla och ger snabba
+                resultat för färska måltider.
+              </p>
+            </section>
 
-          <section class="user">
-            <figure class="user-icon">
-              <img src="user1.jpg" alt="" loading="lazy" />
+            <footer class="plant-card-user">
+              <figure class="plant-card-user-icon">
+                <img
+                  src="https://avatar.iran.liara.run/public/35"
+                  alt=""
+                  loading="lazy"
+                />
+                <figcaption class="visually-hidden">
+                  Bild på användarens profilbild för att visa vem som har
+                  skrivit kortet.
+                </figcaption>
+              </figure>
+              <span class="plant-card-username">Grönis</span>
+              <time class="plant-card-time" datetime="2024-12-06"
+                >2024-12-06</time
+              >
+            </footer>
+          </li>
+          <li class="plant-card">
+            <figure class="plant-card-image">
+              <img
+                src="/Assets/images/jpg/ormbunke.jpg"
+                alt=""
+                loading="lazy"
+              />
               <figcaption class="visually-hidden">
-                Bild på användarens profilbild för att visa vem som har skrivit
-                kortet.
+                En bild av en Ormbunke för att visa vad kortet handlar om för
+                planta.
               </figcaption>
             </figure>
-            <span>Naturvännen</span>
-            <time datetime="2024-12-08"></time>
-          </section>
-        </article>
+
+            <section class="plant-card-tags">
+              <ul class="plant-card-tag-list">
+                <li>
+                  <a href="#" class="tag-luftfuktande" rel="tag"
+                    >Luftfuktande</a
+                  >
+                </li>
+                <li><a href="#" class="tag-grönsak" rel="tag">Grönska</a></li>
+                <li>
+                  <a href="#" class="tag-dekorativ" rel="tag">Dekorativ</a>
+                </li>
+              </ul>
+            </section>
+
+            <header class="plant-card-header">
+              <h4 class="plant-card-title">Ormbunke</h4>
+            </header>
+
+            <section class="plant-card-description">
+              <p>
+                En klassisk växt som passar perfekt i badrummet eller på
+                skuggiga platser.
+              </p>
+            </section>
+
+            <footer class="plant-card-user">
+              <figure class="plant-card-user-icon">
+                <img
+                  src="https://avatar.iran.liara.run/public/8"
+                  alt=""
+                  loading="lazy"
+                />
+                <figcaption class="visually-hidden">
+                  Bild på användarens profilbild för att visa vem som har
+                  skrivit kortet.
+                </figcaption>
+              </figure>
+              <span class="plant-card-username">Naturvännen</span>
+              <time class="plant-card-time" datetime="2024-12-08"
+                >2024-12-08</time
+              >
+            </footer>
+          </li>
+        </ul>
       </section>
-      <section>
-        <figure>
-          <img src="icon.jpg" alt="" />
+      <section class="previous-plants">
+        <figure class="svg-figure">
+          <svg
+            class="previous-plants-svg"
+            aria-hidden="true"
+            width="155"
+            height="209"
+            viewBox="0 0 155 209"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.9255 91.7396C8.05954 91.7396 4.92554 94.8736 4.92554 98.7396V115.983C4.92554 119.849 8.05953 122.983 11.9255 122.983H16.0082V148.566C16.0082 181.703 42.8711 208.566 76.0082 208.566H78.9917C112.129 208.566 138.992 181.703 138.992 148.566V122.983H142.459C146.325 122.983 149.459 119.849 149.459 115.983V98.7396C149.459 94.8736 146.325 91.7396 142.459 91.7396H11.9255ZM59.0288 122.983H45.7187L45.6258 116.983H59.0288V122.983ZM70.1115 122.983H132.992V148.566C132.992 178.389 108.815 202.566 78.9917 202.566H76.0082C46.1848 202.566 22.0082 178.389 22.0082 148.566V122.983H32.1716L32.0788 116.983H19.0082H11.9255C11.3733 116.983 10.9255 116.536 10.9255 115.983V98.7396C10.9255 98.1873 11.3733 97.7396 11.9255 97.7396H142.459C143.011 97.7396 143.459 98.1873 143.459 98.7396V115.983C143.459 116.536 143.011 116.983 142.459 116.983H135.992H70.1115V122.983Z"
+              fill="white"
+            />
+            <path
+              d="M80.5 36.248C80.5 34.5911 79.1569 33.248 77.5 33.248C75.8431 33.248 74.5 34.5911 74.5 36.248H80.5ZM80.5 92.8926V36.248H74.5V92.8926H80.5Z"
+              fill="white"
+            />
+            <path
+              d="M3 3H50.5C65.4117 3 77.5 15.0883 77.5 30V36.2479H30C15.0883 36.2479 3 24.1596 3 9.24793V3Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M152 19.624H104.5C89.5883 19.624 77.5 31.7123 77.5 46.624V52.872H125C139.912 52.872 152 40.7836 152 25.872V19.624Z"
+              stroke="white"
+              stroke-width="6"
+              stroke-linejoin="round"
+            />
+          </svg>
           <figcaption class="visually-hidden">
             En bild av hemsidans icon bild av en grön planta.
           </figcaption>
         </figure>
 
-        <h4>Våra tidigare odlingar</h4>
+        <h5>Våra tidigare odlingar</h5>
 
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
@@ -459,40 +569,62 @@
           delectus ipsam esse pariatur rerum eveniet nostrum, dolor distinctio
           nam quaerat doloribus?
         </p>
-        <button>Planterade plantor</button>
+        <button class="button">Planterade plantor</button>
       </section>
-      <footer>
-        <figure>
-          <img src="icon.jpg" alt="Grön planta – hemsidans ikon" />
-          <figcaption class="hidden">
-            En bild av hemsidans ikon: en grön planta.
-          </figcaption>
-        </figure>
+      <footer class="footer">
+        <div class="footer-left">
+          <div class="brand">
+            <figure>
+              <svg
+                title="Planned Planthood Logo"
+                viewBox="0 0 214 210"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g fill="none" stroke-width="12">
+                  <path
+                    d="M116.833 193.533C117.406 192.909 117.969 192.279 118.522 191.645L168.173 160.226C206.289 136.107 217.36 86.0907 192.816 48.5247C189.153 42.9185 181.619 41.3343 175.976 44.905L125.764 76.6782C121.37 70.1605 116.086 64.0725 109.92 58.5872L52.4904 7.49831C46.8526 2.48295 38.1677 2.90777 33.061 8.46735C-2.89261 47.6094 0.211903 108.041 39.9737 143.413L97.4031 194.502C103.041 199.517 111.726 199.092 116.833 193.533Z"
+                  />
+                  <path
+                    d="M115.122 194.336C115.527 193.897 115.927 193.455 116.319 193.009L153.69 169.521C182.93 151.143 191.451 112.997 172.598 84.3362C169.529 79.6722 163.25 78.3762 158.555 81.3272L121.425 104.664C118.17 100 114.303 95.6362 109.83 91.6843L66.4654 53.3677C61.8146 49.2582 54.6598 49.6021 50.4409 54.1641C22.9065 83.9378 25.2893 129.917 55.732 156.816L99.097 195.132C103.748 199.242 110.903 198.898 115.122 194.336Z"
+                  />
+                </g>
+              </svg>
+              <figcaption class="visually-hidden">
+                En bild av hemsidans ikon: en grön planta.
+              </figcaption>
+            </figure>
 
-        <h2>Planned Planthood</h2>
-
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque,
-          veniam ducimus aut sint atque ullam alias perspiciatis fuga.
-          Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione
-          earum. Iure, eius molestias?
-        </p>
-
-        <address>
-          <p>Telefon: <a href="tel:0201234567">020-1234567</a></p>
+            <h6>
+              PLANNED <br />
+              PLANTHOOD
+            </h6>
+          </div>
           <p>
-            E-post:
-            <a href="mailto:info@plannedplant.com">info@plannedplant.com</a>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque,
+            veniam ducimus aut sint atque ullam alias perspiciatis fuga.
+            Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione
+            earum. Iure, eius molestias?
           </p>
-        </address>
-        <nav>
-          <ul>
-            <li><a href="#">Hem</a></li>
-            <li><a href="#">Historik</a></li>
-            <li><a href="#">Tips</a></li>
-            <li><a href="#">Kontakt</a></li>
-          </ul>
-        </nav>
+
+          <address class="address">
+            <p>Telefon: <a class="address-info" href="tel:0201234567">020-1234567</a></p>
+            <p>
+              E-post:
+              <a class="address-info" href="mailto:info@plannedplant.com">info@plannedplant.com</class=>
+            </p>
+          </address>
+        </div>
+
+        <div class="footer-nav">
+          <nav>
+            <ul>
+              <li><a href="#">Hem</a></li>
+              <li><a href="#">Historik</a></li>
+              <li><a href="#">Tips</a></li>
+              <li><a href="#">Kontakt</a></li>
+            </ul>
+          </nav>
+        </div>
       </footer>
     </main>
   </body>
