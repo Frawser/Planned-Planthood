@@ -209,8 +209,8 @@ body {
 }
 
 .brand svg {
-  width: 42px;
-  height: 42px;
+  width: 2.5rem;
+  height: 2.5rem;
   stroke: var(--clr-accent);
   stroke-width: 2;
   margin-right: 0.5rem;
@@ -258,8 +258,8 @@ body {
 }
 
 .hamburger span {
-  width: 25px;
-  height: 3px;
+  width: 1.5rem;
+  height: 0.1rem;
   background-color: var(--clr-accent);
   margin: 3px 0;
   transition: 0.3s;
@@ -534,7 +534,7 @@ body {
   transition: transform 0.2s ease;
 }
 
-/* tablet */
+/* Tablet */
 @media (980px > width) {
   .plant-card-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -550,7 +550,7 @@ body {
 }
 
 /* Mobile*/
-@media (max-width: 510px) {
+@media (540px > width) {
   .plant-card-grid {
     grid-template-columns: 1fr;
     margin: 1rem;
@@ -844,7 +844,7 @@ body {
   flex-direction: column;
   gap: 1.5rem;
   flex: 1;
-  max-width: 500px;
+  max-width: 30rem;
 }
 
 .address p {
